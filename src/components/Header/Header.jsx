@@ -4,7 +4,7 @@ import "./Header";
 
 const Header = () => {
   return (
-    <nav className="bg-slate-900 h-20 flex justify-between items-center px-24 ">
+    <nav className="bg-slate-900 h-20 flex justify-between items-center px-24 sticky">
       <img src={logo} alt="" />
       <div className="text-white gap-3">
         <a href="/Order">Order</a>

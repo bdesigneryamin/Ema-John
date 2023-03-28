@@ -4,7 +4,7 @@ const Product = (props) => {
   // console.log(props);
   const { name, price, img, ratingsCount, seller } = props.product;
   const addToCart = props.addToCart;
-  console.log(addToCart);
+  // console.log(addToCart);
 
   return (
     <div>
