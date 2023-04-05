@@ -5,10 +5,16 @@ const Cart = (props) => {
   const cart = props.cart;
   let totalPrice = 0;
   let shippingPrice = 0;
+  let quantity = 0;
   for (const product of cart) {
     // console.log(product.price);
-    totalPrice = totalPrice + product.price;
+    if (product.quantity === 0) {
+      product.quantity = 1;
+    }
+    // product.quantity=product.quantity || 1;
+    totalPrice = totalPrice + product.price * product.quantity;
     shippingPrice = shippingPrice + product.shipping;
+    quantity = quantity + product.quantity;
   }
   const tax = (totalPrice * 5) / 100;
   const grandTotal = totalPrice + shippingPrice + tax;
